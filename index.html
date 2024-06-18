@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- TypeIt package -->
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="HIGHT: Hierarchical Graph Tokenization for Graph-Language Alignment">
+        <meta name="keywords" content="JailBreak, LLM, Security">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HIGHT: Hierarchical Graph Tokenization for Graph-Language Alignment</title>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MS74XY0D2Z"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-MS74XY0D2Z');
+        </script>
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+        <link rel="stylesheet" href="./static/css/bulma.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="./static/css/index.css">
+        <link rel="icon" href="./static/images/higraphllm.webp">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script src="./static/js/bulma-carousel.min.js"></script>
+        <script src="./static/js/bulma-slider.min.js"></script>
+        <script src="./static/js/index.js"></script>
+        <!-- Typing Effect JS -->
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.10.1/typeit.min.js"></script>
+        <!-- / Typing Effect JS -->
+        <style>
+    .bigdiv {
+      font-size: large;
+      font-family: "Courier New";
+      padding: 2rem;
+    }
+    p {
+      padding: 2rem;
+    }
+        </style>
+    </head>
+    <body>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">HIGHT: Hierarchical Graph Tokenization for Graph-Language Alignment</h1>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <a href="https://lfhase.win">Yongqiang Chen</a>
+                                    <sup>2,*</sup>
+                                    ,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://lars-group.github.io/">Quanming Yao</a>
+                                    <sup>3</sup>
+                                    ,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://lars-group.github.io/">Juzheng Zhang</a>
+                                    <sup>3</sup>
+                                    ,
+                                </span>
+                                <br>
+                                <span class="author-block">
+                                    <a href="https://www.cse.cuhk.edu.hk/~jcheng/">James Cheng</a>
+                                    <sup>2</sup>
+                                    ,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://yataobian.com/">Yatao Bian</a>
+                                    <sup>1</sup>
+                                    ,
+                                </span>
+                            </div>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <sup>2</sup>Tencent AI Lab,
+                                </span>
+                                <span class="author-block">
+                                    <sup>1</sup>The Chinese University of Hong Kong,
+                                </span>
+                                <span class="author-block">
+                                    <sup>3</sup>Tsinghua University
+                                </span>
+                            </div>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block" style="font-size: 15px;">(
+                                    <sup>*</sup>Intern at Tencent AI Lab)
+                                </span>
+                            </div>
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <!-- PDF Link. -->
+                                    <span class="link-block">
+                                        <a href="https://arxiv.org/abs/2402.03941" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-file-pdf"></i>
+                                            </span>
+                                            <span>Paper</span>
+                                        </a>
+                                    </span>
+                                    <!-- Code Link. -->
+                                    <span class="link-block">
+                                        <a href="https://higraphllm.github.io/" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                            <span>Code</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="content has-text-centered">
+              <img src="./static/images/overview.png" style="width:400px;">
+            </div>
+            <section class="section">
+                <div class="container is-max-desktop">
+                    <!-- Abstract. -->
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-four-fifths">
+                            <h2 class="title is-3">Abstract</h2>
+                            <div class="content has-text-justified">
+                                <p>
+                                    Recently there has been a surge of interest in extending the success of large language models (LLMs) to graph modality,
+                                    such as social networks and molecules. As LLMs are predominantly trained with 1D text data, most existing approaches
+                                    adopt a graph neural network to represent a graph as a series of node tokens and feed these tokens to LLMs for
+                                    graph-language alignment. Despite achieving some successes, existing approaches have overlooked the hierarchical
+                                    structures that are inherent in graph data. Especially, in molecular graphs, the high-order structural information
+                                    contains rich semantics of molecular functional groups, which encode crucial biochemical functionalities of the
+                                    molecules. We establish a simple benchmark showing that neglecting the hierarchical information in graph tokenization
+                                    will lead to subpar graph-language alignment and severe hallucination in generated outputs. To address this problem, we
+                                    propose a novel strategy called HIerarchical GrapH Tokenization (HIGHT). HIGHT employs a hierarchical graph tokenizer
+                                    that extracts and encodes the hierarchy of node, motif, and graph levels of informative tokens to improve the graph
+                                    perception of LLMs. HIGHT also adopts an augmented graph-language supervised fine-tuning dataset, enriched with the
+                                    hierarchical graph information, to further enhance the graph-language alignment. Extensive experiments on 7
+                                    molecule-centric benchmarks confirm the effectiveness of HIGHT in reducing hallucination by 40%, as well as significant
+                                    improvements in various molecule-language downstream tasks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Abstract. -->
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="container is-max-desktop">
+                    <!-- Abstract. -->
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-four-fifths">
+                            <h2 class="title is-3">HIGHT Framework</h2>
+                            <div class="content has-text-justified">
+                                <!-- Add image -->
+                                <div class="figure" style="align: left; text-align:center;">
+                                    <img
+                                        src="./static/images/hight_overview.png"
+                                        alt="img description"
+                                        width="800"
+                                        height="600"
+                                    >
+                                    <p class="content is-centered" style="color: gray; font-size: 10pt;">
+                                        <b>Figure 1</b>. Illustration of the HIGHT framework.
+                                    </p>
+                                </div>
+                                Given a molecule (i.e., PubChem ID 3, 2,3-dihydroxy-2,3-dihydrobenzoic acid), HIGHT detects the motifs and
+                                incorporates the ``supernodes'' for each motif (The whole graph is also considered as a ``super motif''.). Then, HIGHT
+                                tokenizes the molecule into both node-level (i.e., atoms) and motif-level (i.e., functional groups) tokens. The
+                                hierarchical view enables LLMs to align the molecular structures and the language descriptions of the molecule better.
+                                <!-- \textit{(b)} Therefore, HIGHT significantly reduces the hallucination of LGLMs and improves the downstream performance -->
+                                <!-- across various molecule-centric tasks. All metrics are transformed a bit such that a higher number means a better -->
+                                <!-- downstream task performance. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Abstract. -->
+            </div>
+        </section>
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column is-full-width has-text-centered">
+                        <h2 class="title is-3">Motif Hallucination</h2>
+                        <div class="content has-text-justified is-centered">
+                            <p>
+                                 With only node-level tokens (i.e., discrete atom
+                                embeddings), LLMs have to identify and connect the nodes within a specific functional group in order to align useful
+                                molecular structures in a molecule to the corresponding language descriptions. Yet, due to the arbitrary order of atoms
+                                and position biases in LLMs, it is harder to distinguish each functional group, which further leads to hallucination and
+                                subpar alignment.
+                            </p>
+                        </div>
+                        <div class="figure" style="align: left; text-align:center;">
+                            <img src="./static/images/motif_hallu.png" alt="img description" width="800" height="600">
+                            <p class="content is-centered" style="color: gray; font-size: 10pt;">
+                                <b>Figure 2</b>. Illustration of motif hallucination caused by tokenization.
+                            </p>
+                        </div>
+                        <div class="content has-text-justified is-centered">
+                            <p>
+                                To understand the issue of node-centric tokenization more clearly, we construct a simple benchmark called MotifHallu,
+                                which measures the hallucination of common functional groups by LGLMs. Specifically, we consider the 38 common
+                                functional groups in RDKit, and construct 23,924 examples of query-answer pairs that asks LLMs about the existence of the functional groups.
+                            </p>
+                        </div>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/hallu_example.png" style="width:500px;" class="result-image"
+                                alt="Interpolation end reference image.">
+                            <p class="content is-centered" style="color: gray; font-size: 10pt;">
+                                <b>Figure 3</b>. Examples of MotifHallu benchmark.
+                            </p>
+                        </div>
+                        <div class="content has-text-justified is-centered">
+                            <p>
+                                Due to the limitation of motif perception and suboptimal alignment, it can be observed a severe hallucination ratio.
+                                In contrast, HIGHT significantly alleviates the hallucination.
+                            </p>
+                        </div>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/hallu_results.png" style="width:500px;" class="result-image"
+                                alt="Interpolation end reference image.">
+                            <p class="content is-centered" style="color: gray; font-size: 10pt;">
+                                <b>Figure 4</b>. Hallucination results. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column is-full-width has-text-centered">
+                        <h2 class="title is-3">Results on Downstream Tasks</h2>
+                        <div class="content has-text-justified is-centered">
+                            <p>
+                                We also compare the performances of HIGHT with other LGLMs across 6 downstream tasks including including property prediction, molecular description, and chemical reaction prediction.
+                            </p>
+                        </div>
+                        <div class="content has-text-centered">
+                            <img
+                                src="./static/images/classification_results.png"
+                                style="width:800px;"
+                                class="result-image"
+                                alt="Interpolation end reference image."
+                            >
+                            <p class="content is-centered" style="color: gray; font-size: 10pt;">
+                                <b>Figure 5</b>. ROC-AUC Results of molecular property prediction tasks
+                                (classification) on MoleculeNet.
+                            </p>
+                        </div>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/regression_results.png" style="width:800px;" class="result-image"
+                                alt="Interpolation end reference image.">
+                            <p class="content is-centered" style="color: gray; font-size: 10pt;">
+                                <b>Figure 6</b>. Results of molecular property prediction tasks (regression) on QM9.
+                            </p>
+                        </div>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/molcap_results.png" style="width:800px;" class="result-image"
+                                alt="Interpolation end reference image.">
+                            <p class="content is-centered" style="color: gray; font-size: 10pt;">
+                                <b>Figure 7</b>. Results of molecular description generation task on the test split of ChEBI-20.
+                            </p>
+                        </div>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/reaction_results.png" style="width:800px;" class="result-image"
+                                alt="Interpolation end reference image.">
+                            <p class="content is-centered" style="color: gray; font-size: 10pt;">
+                                <b>Figure 8</b>. Results of chemical reaction tasks from Mol-Instructions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+                <h2 class="title">Contact</h2>
+                <p>
+                    Welcome to check our paper for more details of the research work. If there is any question, please feel free to contact us.
+                </p>
+                <p>
+                    If you find our paper and repo useful, please consider to cite:
+                </p>
+                <pre>
+                    <code>
+    @article{higraphllm2024,
+      title={HIGHT: Hierarchical Graph Tokenization for Graph-Language Alignment}, 
+      author={Yongqiang Chen and Quanming Yao and Juzheng Zhang and James Cheng and Yatao Bian},
+      year={2024},
+      journal = {arXiv preprint},
+      volume = {arXiv:TBD}
+    }
+                    </code>
+                </pre>
+                <br>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <div class="content">
+                            <p>
+                                Thanks for the source template from
+                                <a href="https://github.com/nerfies/nerfies.github.io">here</a>
+                                .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
