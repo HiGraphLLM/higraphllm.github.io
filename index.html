@@ -57,47 +57,56 @@
                             <div class="is-size-5 publication-authors">
                                 <span class="author-block">
                                     <a href="https://lfhase.win">Yongqiang Chen</a>
-                                    <sup>2,*</sup>
+                                    <sup>1,2,3</sup>
                                     ,
                                 </span>
                                 <span class="author-block">
                                     <a href="https://lars-group.github.io/">Quanming Yao</a>
-                                    <sup>3</sup>
+                                    <sup>4</sup>
                                     ,
                                 </span>
                                 <span class="author-block">
                                     <a href="https://lars-group.github.io/">Juzheng Zhang</a>
-                                    <sup>3</sup>
+                                    <sup>5</sup>
                                     ,
                                 </span>
                                 <br>
                                 <span class="author-block">
                                     <a href="https://www.cse.cuhk.edu.hk/~jcheng/">James Cheng</a>
-                                    <sup>2</sup>
+                                    <sup>3</sup>
                                     ,
                                 </span>
                                 <span class="author-block">
                                     <a href="https://yataobian.com/">Yatao Bian</a>
-                                    <sup>1</sup>
+                                    <sup>6</sup>
                                     ,
                                 </span>
                             </div>
                             <div class="is-size-5 publication-authors">
                                 <span class="author-block">
-                                    <sup>1</sup>Tencent AI Lab,
+                                    <sup>1</sup>MBZUAI,
                                 </span>
                                 <span class="author-block">
-                                    <sup>2</sup>The Chinese University of Hong Kong,
+                                    <sup>2</sup>Carnegie Mellon University,
                                 </span>
                                 <span class="author-block">
-                                    <sup>3</sup>Tsinghua University
+                                    <sup>3</sup>The Chinese University of Hong Kong,
+                                </span>
+                                <span class="author-block">
+                                    <sup>4</sup>Tsinghua University,
+                                </span>
+                                <span class="author-block">
+                                    <sup>5</sup>University of Maryland, College Park,
+                                </span>
+                                <span class="author-block">
+                                    <sup>6</sup>National University of Singapore
                                 </span>
                             </div>
-                            <div class="is-size-5 publication-authors">
+                            <!-- <div class="is-size-5 publication-authors">
                                 <span class="author-block" style="font-size: 15px;">(
                                     <sup>*</sup>Intern at Tencent AI Lab)
                                 </span>
-                            </div>
+                            </div> -->
                             <div class="column has-text-centered">
                                 <div class="publication-links">
                                     <!-- PDF Link. -->
@@ -149,20 +158,7 @@
                             <h2 class="title is-3">Abstract</h2>
                             <div class="content has-text-justified">
                                 <p>
-                                    Recently there has been a surge of interest in extending the success of large language models (LLMs) to graph modality,
-                                    such as social networks and molecules. As LLMs are predominantly trained with 1D text data, most existing approaches
-                                    adopt a graph neural network to represent a graph as a series of node tokens and feed these tokens to LLMs for
-                                    graph-language alignment. Despite achieving some successes, existing approaches have overlooked the hierarchical
-                                    structures that are inherent in graph data. Especially, in molecular graphs, the high-order structural information
-                                    contains rich semantics of molecular functional groups, which encode crucial biochemical functionalities of the
-                                    molecules. We establish a simple benchmark showing that neglecting the hierarchical information in graph tokenization
-                                    will lead to subpar graph-language alignment and severe hallucination in generated outputs. To address this problem, we
-                                    propose a novel strategy called HIerarchical GrapH Tokenization (HIGHT). HIGHT employs a hierarchical graph tokenizer
-                                    that extracts and encodes the hierarchy of node, motif, and graph levels of informative tokens to improve the graph
-                                    perception of LLMs. HIGHT also adopts an augmented graph-language supervised fine-tuning dataset, enriched with the
-                                    hierarchical graph information, to further enhance the graph-language alignment. Extensive experiments on 7
-                                    molecule-centric benchmarks confirm the effectiveness of HIGHT in reducing hallucination by 40%, as well as significant
-                                    improvements in various molecule-language downstream tasks.
+                                    Recently, there has been a surge of interest in extending the success of large language models (LLMs) from texts to molecules. Most existing approaches adopt a graph neural network to represent a molecule as a series of node tokens for molecule-language alignment, which, however, have overlooked the inherent hierarchical structures in molecules. Notably, highe-rorder molecular structures contain rich semantics of functional groups, which encode crucial biochemical functionalities of the molecules. We show that neglecting the hierarchical information in tokenization will lead to subpar molecule-language alignment and severe hallucination. To address this limitation, we propose HIerarchical GrapH Tokenization (HIGHT). HIGHT employs a hierarchical graph tokenizer that encodes the hierarchy of atom, motif, and molecular levels of informative tokens to improve the molecular perception of LLMs. HIGHT also adopts an augmented instruction tuning dataset, enriched with the hierarchical graph information, to further enhance the molecule-language alignment. Extensive experiments on 14 real-world benchmarks verify the effectiveness of HIGHT in reducing hallucination by 40%, and significant improvements in various molecule-language downstream tasks. The project is available at https: //higraphllm.github.io/.
                                 </p>
                             </div>
                         </div>
@@ -221,7 +217,7 @@
                         <div class="figure" style="align: left; text-align:center;">
                             <img src="./static/images/motif_hallu.png" alt="img description" width="800" height="600">
                             <p class="content is-centered" style="color: gray; font-size: 10pt;">
-                                <b>Figure 2</b>. Illustration of motif hallucination caused by tokenization.
+                                <b>Figure 2.</b> Illustration of Motif Hallucinations.
                             </p>
                         </div>
                         <div class="content has-text-justified is-centered">
@@ -235,7 +231,7 @@
                             <img src="./static/images/hallu_example.png" style="width:500px;" class="result-image"
                                 alt="Interpolation end reference image.">
                             <p class="content is-centered" style="color: gray; font-size: 10pt;">
-                                <b>Figure 3</b>. Examples of MotifHallu benchmark.
+                                <b>Figure 3.</b> Examples of MotifHallu benchmark.
                             </p>
                         </div>
                         <div class="content has-text-justified is-centered">
@@ -245,10 +241,17 @@
                             </p>
                         </div>
                         <div class="content has-text-centered">
-                            <img src="./static/images/hallu_results.png" style="width:500px;" class="result-image"
+                            <img src="./static/images/hallu_results_1.png" style="width:800px;" class="result-image"
                                 alt="Interpolation end reference image.">
                             <p class="content is-centered" style="color: gray; font-size: 10pt;">
-                                <b>Figure 4</b>. Hallucination results. 
+                                <b>Figure 4. Detailed results in motif hallucinations on MotifHallu.</b> Due to the imbalance of samples from positive and negative classes, we incorporate diverse evaluation metrics to provide a detailed comparison between different methods in terms of hallucination.
+                            </p>
+                        </div>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/hallu_results_2.png" style="width:500px;" class="result-image"
+                                alt="Interpolation end reference image.">
+                            <p class="content is-centered" style="color: gray; font-size: 10pt;">
+                                <b>Figure 5. Influence of tokenization on motif hallucinations on MotifHallu.</b>
                             </p>
                         </div>
                     </div>
@@ -268,34 +271,47 @@
                         <div class="content has-text-centered">
                             <img
                                 src="./static/images/classification_results.png"
-                                style="width:500px;"
+                                style="width:800px;"
                                 class="result-image"
                                 alt="Interpolation end reference image."
                             >
                             <p class="content is-centered" style="color: gray; font-size: 10pt;">
-                                <b>Figure 5</b>. ROC-AUC Results of molecular property prediction tasks
-                                (classification) on MoleculeNet.
+                                <b>Figure 6. ROC-AUC Results of molecular property prediction tasks
+                                (classification) on MoleculeNet.</b> Evaluation on InstructMol and HIGHT adopt the likelihood of the tokens of ``Yes'' and ``No''. Most of the instruction tuning datasets are from GIMLET. SIDER and ClinTox are converted following the MoleculeNet task description.
                             </p>
                         </div>
                         <div class="content has-text-centered">
                             <img src="./static/images/regression_results.png" style="width:500px;" class="result-image"
                                 alt="Interpolation end reference image.">
                             <p class="content is-centered" style="color: gray; font-size: 10pt;">
-                                <b>Figure 6</b>. Results of molecular property prediction tasks (regression) on QM9.
+                                <b>Figure 7.</b> Results of molecular property prediction tasks (regression) on QM9.
                             </p>
                         </div>
                         <div class="content has-text-centered">
-                            <img src="./static/images/molcap_results.png" style="width:500px;" class="result-image"
+                            <img src="./static/images/molcap_results.png" style="width:800px;" class="result-image"
                                 alt="Interpolation end reference image.">
                             <p class="content is-centered" style="color: gray; font-size: 10pt;">
-                                <b>Figure 7</b>. Results of molecular description generation task on the test split of ChEBI-20.
+                                <b>Figure 8.</b> Results of molecular description generation task on the test split of ChEBI-20.
                             </p>
                         </div>
                         <div class="content has-text-centered">
-                            <img src="./static/images/reaction_results.png" style="width:500px;" class="result-image"
+                            <img src="./static/images/reaction_results.png" style="width:800px;" class="result-image"
                                 alt="Interpolation end reference image.">
                             <p class="content is-centered" style="color: gray; font-size: 10pt;">
-                                <b>Figure 8</b>. Results of chemical reaction tasks from Mol-Instructions.
+                                <b>Figure 9.</b> Results of chemical reaction tasks from Mol-Instructions.
+                            </p>
+                        </div>
+                        <div class="content has-text-justified is-centered">
+                            <p>
+                                We follow the previous practice in training and evaluating generalist models and consider the two settings: a) As shown in Fig. 3(a), we first train the model with all chemical reaction prediction data by 3 epochs to elicit the format following and the knowledge adaption capabilities of the LGLMs after stage 1. The models are named with “-All”; b) As shown in Fig. 3(b), we train the model with retrosynthesis task data and evaluate the zero-shot transfer performance on forward reaction prediction. Under both settings, we can find that HIGHT boosts the generalist capabilities significantly.
+                                To better understand the effectiveness of distinct components in HIGHT, we conduct ablation studies that train InstructMol with the laplacian positional encodings or with HiPubChem, as given in Fig. 3(c). We can find that, merely incorporating positional encoding or hierarchical instruction tuning is not sufficient to achieve the same performance as HIGHT. On the contrary, without a proper architecture design as HIGHT, LGLMs with previous node-centric tokenization with HiPubChem will confuse LLMs and even lead to degenerated downstream task performances. In addition, we also compare LGLMs with llama2 backbone. As shown in Fig. 3(a), HIGHT still significantly boosts the performance.
+                            </p>
+                        </div>
+                        <div class="content has-text-centered">
+                            <img src="./static/images/ablation.png" style="width:800px;" class="result-image"
+                                alt="Interpolation end reference image.">
+                            <p class="content is-centered" style="color: gray; font-size: 10pt;">
+                                <b>Figure 10.</b> Ablation studies.
                             </p>
                         </div>
                     </div>
